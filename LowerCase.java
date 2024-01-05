@@ -11,7 +11,14 @@ public class LowerCase {
     * Non-letter characters are left as is.
     */
     public static String lowerCase(String s) {
-        // Replace the following statement with your code
+        String ans = "";
+        for(int i = 0 ; i < s.length() ; i++ ) {
+            char charI = s.charAt(i);
+            if ( charI >= 'A' && charI <= 'Z') {
+                charI = (char) (charI + 32);
+            }
+            ans += charI;
+        }
         return null;
     }
 }
