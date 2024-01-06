@@ -34,7 +34,7 @@ public class LoanCalc {
     	double low = loan / n;
     	double high = loan;
         double x = (high + low) / 2;
-        while ( Math.abs(endBalance(loan,rate,n,x)) >= epsilon ) {
+        while ( high - low >= epsilon ) {
     	    if ( endBalance(loan,rate,n,x) > 0 ) {
     	    	 low = x;
 	    } else { 
