@@ -19,7 +19,7 @@ public class LoanCalc {
 		System.out.println();
 		System.out.println("number of iterations: " + iterationCounter);
 	}
-       public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {  
+        public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {  
     	iterationCounter = 0;
     	double x = loan / n;
     		while ( endBalance(loan,rate,n,x) > 0 ) {
