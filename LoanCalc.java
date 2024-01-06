@@ -23,11 +23,11 @@ public class Loantestyuval {
     	iterationCounter = 0;
     	double x = loan / n;
     		while ( endBalance(loan,rate,n,x) > 0 ) {
-                x += epsilon;
+                    x += epsilon;
     		    iterationCounter++;
-    	    }
+    	        }
           return x;
-      }
+        }
 
         public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
     	iterationCounter = 0;
@@ -35,15 +35,17 @@ public class Loantestyuval {
     	double high = loan;
         double x = (high + low) / 2;
         while ( Math.abs(endBalance(loan,rate,n,x)) >= epsilon ) {
-    	    if ( endBalance(loan,rate,n,x) > 0 )
+    	    if ( endBalance(loan,rate,n,x) > 0 ) {
     	    	 low = x;
-    	    else 
+	    } else { 
     	    	 high = x;
-    	    x = (high + low) / 2;
-    	    iterationCounter++;
+	    }
+    	 x = (high + low) / 2;
+    	 iterationCounter++;
     	}
     	    return x;
         }
+	
       		public static double endBalance(double loan, double rate, int n, double payment) {
 		double paymentLeft = loan;
 		double sum = 0;
@@ -51,7 +53,7 @@ public class Loantestyuval {
     	           sum = (paymentLeft - payment) * ( 1 + rate / 100) ;
                    paymentLeft = sum;
                 }
-    	return paymentLeft; 
-    }
+    	        return paymentLeft; 
+                }  
 }
 
