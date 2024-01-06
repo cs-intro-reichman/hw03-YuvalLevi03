@@ -19,6 +19,6 @@ public class LowerCase {
             }
             ans += charI;
         }
-        return null;
+        return ans;
     }
 }
