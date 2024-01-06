@@ -53,7 +53,7 @@ public class LoanCalc {
     	           sum = (paymentLeft - payment) * ( 1 + rate / 100) ;
                    paymentLeft = sum;
                 }
-    	        return paymentLeft; 
+    	           return paymentLeft; 
                 }  
 }
 
