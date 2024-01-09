@@ -19,27 +19,22 @@ public class Calendar1 {
 	    // The following variable, used for debugging purposes, counts how many days were advanced so far.
 	    int debugDaysCounter = 0;
 	    int countSunday = 0;
-	    //// Write the necessary initialization code, and replace the condition
-	    //// of the while loop with the necessary condition 
-	 	while (year < 2000) {
-	 	        if (dayOfWeek == 1) {
-	 		     System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
-	 		     if (dayOfMonth == 1) countSunday ++;
-	 	        } else {
-                             System.out.println(dayOfMonth + "/" + month + "/" + year);
-	 		}		
-	 		advance();
-	 		debugDaysCounter++;
-	 		//// If you want to stop the loop after n days, replace the condition of the
-	 		//// if statement with the condition (debugDaysCounter == n)
-	 		if (debugDaysCounter == 40000) { 
-	 			break;
-	 		}
-                  }
+	    while (year < 2000) {
+	 	 if (dayOfWeek == 1) {
+	 	      System.out.println(dayOfMonth + "/" + month + "/" + year + " Sunday");
+	 	      if (dayOfMonth == 1) countSunday ++;
+	 	  } else {
+                      System.out.println(dayOfMonth + "/" + month + "/" + year);
+	 	  }		
+	 	  advance();
+	 	  debugDaysCounter++;
+	 	  if (debugDaysCounter == 40000) { 
+	 	      break;
+	 	  }
+             }
 	 	  System.out.println("During the 20th century, " + countSunday +
         	                     " Sundays fell on the first day of the month");
 	 }
-	
 	 // Advances the date (day, month, year) and the day-of-the-week.
 	 // If the month changes, sets the number of days in this month.
 	 // Side effects: changes the static variables dayOfMonth, month, year, dayOfWeek, nDaysInMonth.
